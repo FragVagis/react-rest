@@ -20,8 +20,13 @@ function App() {
           <h1>Mama jokes</h1>
             <ul>
                 {
-                    mama.map(j => <li key={j.id}>{j.name} {j.mama.joke}</li>)
+                    mama.map(j => <li style={{color: 'aqua'}} key={j.id}>{j.joke}</li>)
                 }
+            </ul>
+            <ul>
+              {
+                 mama.map(j => <li style={{color: 'red'}} key={j.id}>{j.setup} <span style={{color: 'yellow'}}>{j.delivery}</span></li>)
+              }
             </ul>
           </header>
     </div>
